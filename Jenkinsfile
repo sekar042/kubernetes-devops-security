@@ -19,7 +19,7 @@ pipeline {
                  }
         }   
          stage('Docker image build and Push'){
-           steps{
+           steps {
              sh 'docker build -t docker-registry:5000/java-app:latest .'
              sh 'docker push docker-registry:5000/java-app:latest'
            }
